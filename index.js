@@ -27,18 +27,20 @@ const createDate = (arr, index) => {
   return stringEpochSeconds.substring(1)
 }
 
-// ! JANGAN DIMODIFIKASI
-(() => {
-  // IIFE
+console.log(createDate(dates))
 
-  // '1546387200-1580662800-1614841200-1617573600-1651802400' (dalam string)
-  console.log(createDate?.(dates));
+// // ! JANGAN DIMODIFIKASI
+// (() => {
+//   // IIFE
 
-  // '1614841200' (dalam string)
-  console.log(createDate?.(dates, 2));
-})();
+//   // '1546387200-1580662800-1614841200-1617573600-1651802400' (dalam string)
+//   console.log(createDate?.(dates));
 
-module.exports = {
-  dates,
-  createDate,
-};
+//   // '1614841200' (dalam string)
+//   console.log(createDate?.(dates, 2));
+// })();
+
+// module.exports = {
+//   dates,
+//   createDate,
+// };
