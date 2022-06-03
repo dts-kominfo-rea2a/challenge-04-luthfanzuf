@@ -8,7 +8,23 @@ const dates = [
 ];
 
 // TODO: Buatlah fungsi createDate
-const createDate = null;
+const mockDates = ["2022-01-01 UTC+7", "2021-12-31 00:00:00 UTC+2"];
+const createDate = (arr, index) => {
+  let stringEpochSeconds = ""
+  function changeFormat(msNonEpochDate){
+    return Math.ceil(Date.parse(msNonEpochDate) / 1000)
+  }
+  if (index === undefined) {
+    for(let i = 0; i < arr.length; i++) {
+      let str1 = changeFormat(arr[i])
+      stringEpochSeconds = stringEpochSeconds+"-"+str1
+    } 
+  } else {
+      let str2 = changeFormat(arr[index])
+      stringEpochSeconds = stringEpochSeconds+"-"+str2
+  }
+  return stringEpochSeconds.substring(1)
+}
 
 // ! JANGAN DIMODIFIKASI
 (() => {
