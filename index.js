@@ -11,6 +11,7 @@ const dates = [
 // const mockDates = ["2022-01-01 UTC+7", "2021-12-31 00:00:00 UTC+2"];
 const createDate = (arr, index) => {
   let stringEpochSeconds = ""
+  arr.sort()
   function changeFormat(msNonEpochDate){
     return Math.ceil(Date.parse(msNonEpochDate) / 1000)
   }
@@ -26,18 +27,20 @@ const createDate = (arr, index) => {
   return stringEpochSeconds.substring(1)
 }
 
-// ! JANGAN DIMODIFIKASI
-(() => {
-  // IIFE
+console.log(createDate(dates))
 
-  // '1546387200-1580662800-1614841200-1617573600-1651802400' (dalam string)
-  console.log(createDate?.(dates));
+// // ! JANGAN DIMODIFIKASI
+// (() => {
+//   // IIFE
 
-  // '1614841200' (dalam string)
-  console.log(createDate?.(dates, 2));
-})();
+//   // '1546387200-1580662800-1614841200-1617573600-1651802400' (dalam string)
+//   console.log(createDate?.(dates));
 
-module.exports = {
-  dates,
-  createDate,
-};
+//   // '1614841200' (dalam string)
+//   console.log(createDate?.(dates, 2));
+// })();
+
+// module.exports = {
+//   dates,
+//   createDate,
+// };
