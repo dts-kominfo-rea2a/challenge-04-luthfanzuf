@@ -27,8 +27,6 @@ const createDate = (arr, index) => {
   return stringEpochSeconds.substring(1)
 }
 
-console.log(createDate(dates))
-
 // ! JANGAN DIMODIFIKASI
 (() => {
   // IIFE
