@@ -10,23 +10,21 @@ const dates = [
 // TODO: Buatlah fungsi createDate
 // const mockDates = ["2022-01-01 UTC+7", "2021-12-31 00:00:00 UTC+2"];
 const createDate = (arr, index) => {
-  let stringEpochSeconds = ""
-  arr.sort()
+  let date = []
   function changeFormat(msNonEpochDate){
-    return Math.ceil(Date.parse(msNonEpochDate) / 1000)
+    return Date.parse(msNonEpochDate) / 1000
   }
   if (index === undefined) {
     for(let i = 0; i < arr.length; i++) {
-      let str1 = changeFormat(arr[i])
-      stringEpochSeconds = stringEpochSeconds+"-"+str1
+      date.push(changeFormat(arr[i]))
     } 
+    return date.sort().join('-')
   } else {
-      let str2 = changeFormat(arr[index])
-      stringEpochSeconds = stringEpochSeconds+"-"+str2
+    
+    date.push(changeFormat(arr[index]))
   }
-  return stringEpochSeconds.substring(1)
+  return date.toString()
 }
-
 
 // ! JANGAN DIMODIFIKASI
 (() => {
