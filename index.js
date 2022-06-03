@@ -8,7 +8,7 @@ const dates = [
 ];
 
 // TODO: Buatlah fungsi createDate
-const mockDates = ["2022-01-01 UTC+7", "2021-12-31 00:00:00 UTC+2"];
+// const mockDates = ["2022-01-01 UTC+7", "2021-12-31 00:00:00 UTC+2"];
 const createDate = (arr, index) => {
   let stringEpochSeconds = ""
   function changeFormat(msNonEpochDate){
